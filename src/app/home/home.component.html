@@ -1,0 +1,23 @@
+<app-top-nav></app-top-nav>
+
+<table class="table table-striped ml-5 mr-5 mt-5 ">
+  <thead>
+    <tr>
+      <!-- <th scope="col">#</th> -->
+      <th scope="col">Name</th>
+      <th scope="col">Identity Number</th>
+      <th scope="col">Passport Number</th>
+      <th scope="col">User Acive?</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of users">
+    <tr>
+      <!-- <th scope="row">{{user.id}}</th> -->
+      <td (click)="open(user.id)">{{user.name}} </td>
+      <td>{{user.identityNumber}}</td>
+      <td>{{user.passportNumber}}</td>
+      <td>{{user.active}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
